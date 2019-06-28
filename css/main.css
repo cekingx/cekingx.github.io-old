@@ -1,0 +1,157 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto|Viga&display=swap");
+body,
+html {
+  margin: 0;
+}
+
+body {
+  height: 100%;
+  font-family: "Roboto", sans-serif;
+}
+
+header {
+  position: absolute;
+  padding: 1em;
+  z-index: 20;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: calc(100% - 2em);
+  background: white;
+}
+
+header a {
+  text-decoration: none;
+  color: black;
+}
+
+header a.logo {
+  font-family: "Viga", sans-serif;
+}
+
+header nav ul {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin: 0;
+  padding: 0;
+}
+
+header nav ul li a {
+  padding: 1em;
+}
+
+.wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto;
+      grid-template-columns: auto;
+}
+
+.wrapper section {
+  padding: 2em;
+}
+
+.wrapper section h1,
+.wrapper section h2 {
+  margin: 0;
+  text-transform: uppercase;
+  font-family: "Viga";
+}
+
+.wrapper section h2 {
+  font-size: 1.4rem;
+}
+
+.wrapper section .clipper {
+  overflow: hidden;
+}
+
+.wrapper section.hero {
+  padding-top: 8em;
+  background: url("../asset/hero.png");
+  background-size: cover;
+  color: #ff3c3c;
+}
+
+.wrapper section.about,
+.wrapper section.contact {
+  font-size: 0.9em;
+  line-height: 1.6em;
+}
+
+.wrapper section.about {
+  background: #ff3c3c;
+  color: white;
+}
+
+.wrapper section.contact {
+  color: #ff3c3c;
+}
+
+@media only screen and (min-width: 768px) {
+  header {
+    background: none;
+  }
+  header a.logo {
+    font-size: 1.5em;
+  }
+  header nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 28vw;
+  }
+  header nav ul li a {
+    color: white;
+  }
+  .wrapper {
+    -ms-grid-columns: 70% auto;
+        grid-template-columns: 70% auto;
+    -ms-grid-rows: 60% auto;
+        grid-template-rows: 60% auto;
+        grid-template-areas: "hero about" "hero contact";
+    height: 100vh;
+  }
+  section {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: auto;
+        grid-template-rows: auto;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  section.hero {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 1;
+    grid-area: hero;
+  }
+  section.hero h1 {
+    font-size: 2.5em;
+    margin-top: 5em;
+  }
+  section.hero p {
+    font-size: 1.2em;
+  }
+  section.about {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area: about;
+    line-height: 2.5em !important;
+  }
+  section.contact {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+    grid-area: contact;
+  }
+}
+/*# sourceMappingURL=main.css.map */
